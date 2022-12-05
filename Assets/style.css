@@ -1,0 +1,221 @@
+/* General Style */
+
+:root {
+    --dark: black;
+    --light: white;
+}
+
+* {
+    font-family: "Bradley Hand";
+
+}
+
+body {
+    background-image: url(./images/5660740.jpg);
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--dark);
+    margin: 20px;
+}
+
+
+
+/* Header Sylings */
+
+h1 {
+    display: block;
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+}
+
+nav > ul > li > a {
+    padding: 30px;
+}
+
+nav > ul > li > a:hover {
+    background-color: brown;
+    color: var(--light);
+    transition: all 0.5s ease-in-out;
+    opacity: 0.7;
+    border-radius: 12px;
+}
+
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: larger;
+    margin: 40px;
+    padding: 40px;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+}
+
+
+
+
+
+/* About Me stylings */
+
+.about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+}
+
+.aboutpicture {
+    margin: 30px;
+    border-left: 1px solid var(--dark);
+    width: 30%;
+    padding: 20px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.5), 0 0 0 2px rgb(91, 91, 91),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+.aboutpicture:hover {
+    transform: rotate(5deg);
+    transition: all 0.5s ease-in-out;
+    opacity: 0.8;
+}
+
+
+section.about > p {
+    text-align: center;
+    width: 50%;
+    line-height: 60px;
+}
+
+
+
+
+/* Work Stylings */
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.project-image {
+    width: 420px;
+    height: 250px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+#primaryproject {
+    width: 800px;
+    height: 500px;
+    margin: 60px;
+    border-radius: 8px;
+}
+
+.project-image, #primaryproject {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.project-image:hover, #primaryproject:hover {
+    background-color: rgb(165, 65, 42);
+    color: var(--light);
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+    padding: 10px;
+}
+
+#work > h2 {
+    display: block;
+    margin: 60px;
+    padding: 60px;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+    text-align: center;
+}
+
+h3 {
+    font-size: larger;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background: linear-gradient(66deg, rgb(165, 65, 42), grey);
+    color: white;
+    border-radius: 12px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.5), 0 0 0 2px rgb(91, 91, 91),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.6);
+}
+
+h3:hover {
+    background-color: rgb(165, 65, 42);
+    color: var(--light);
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+    margin: 30px;
+} 
+
+
+
+
+/* Contact Me stylings */
+
+
+footer.contact-me > h2 {
+    text-align: center;
+    padding: 30px;
+    margin: 40px;
+    position: relative;
+    top: 40px;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+}
+
+footer.contact-me > div > ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    top: 40px;
+}
+
+footer.contact-me > div > ul > li {
+    padding: 20px;
+    margin: 20px;
+}
+
+.contact:hover {
+    background-color: rgb(165, 65, 42);
+    color: var(--light);
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 992px) {
+    .project-image, #primaryproject {
+      width: 75%;
+      height: 75%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .project-image, #primaryproject {
+      width: 50%;
+      height: 50%;
+    }
+  }
