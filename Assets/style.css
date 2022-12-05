@@ -20,7 +20,9 @@ a {
     list-style: none;
     color: var(--dark);
     margin: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 
 
 
@@ -31,10 +33,19 @@ h1 {
     text-align: center;
     margin: 40px;
     padding: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 60px;
+}
+
+nav > ul > li {
+    padding: 40px;
 }
 
 nav > ul > li > a {
     padding: 30px;
+    background-color: olivedrab;
+    border-radius: 8px;
+    opacity: 0.8;
 }
 
 nav > ul > li > a:hover {
@@ -42,7 +53,7 @@ nav > ul > li > a:hover {
     color: var(--light);
     transition: all 0.5s ease-in-out;
     opacity: 0.7;
-    border-radius: 12px;
+    border-radius: 40px;
 }
 
 
@@ -53,7 +64,7 @@ nav > ul > li > a:hover {
     list-style: none;
     font-size: larger;
     margin: 40px;
-    padding: 40px;
+    padding: 80px;
     border-top: 1px solid var(--dark);
     border-bottom: 1px solid var(--dark);
 }
@@ -91,9 +102,12 @@ nav > ul > li > a:hover {
 
 section.about > p {
     text-align: center;
-    width: 50%;
+    width: 60%;
     line-height: 60px;
+    margin: 60px;
+    font-size: large;
 }
+
 
 
 
@@ -141,6 +155,7 @@ section.about > p {
     border-top: 1px solid var(--dark);
     border-bottom: 1px solid var(--dark);
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h3 {
@@ -178,6 +193,7 @@ footer.contact-me > h2 {
     top: 40px;
     border-top: 1px solid var(--dark);
     border-bottom: 1px solid var(--dark);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 footer.contact-me > div > ul {
