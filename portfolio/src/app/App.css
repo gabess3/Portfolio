@@ -1,0 +1,263 @@
+/* Top Section Styles */
+
+* {
+  scroll-behavior: smooth;
+}
+
+.App-header {
+  background-image: linear-gradient(360deg, #1f1d25, rgb(4, 4, 30));
+  /* background-image: url(../images/carbon-fiber-texture-wallpaper-preview.jpg); */
+  background-size: cover;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  padding: 40px;
+}
+
+.container img {
+  border-radius: 10px;
+  scale: 1.4;
+  margin: 20px;
+  box-shadow: 20px 20px 20px black;
+}
+
+.about {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+.about h1 {
+  font-size: 10vh;
+  margin-top: 180px;
+  animation: fadeIn 3s;
+}
+
+
+.about h3 {
+  box-shadow: 0 10px 20px rgb(69, 33, 112);
+  border-radius: 15px;
+  animation: fadeIn 3s;
+}
+
+.about p {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  width: 50%;
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.terminal {
+  animation: blink 1s infinite step-end;
+  background-color: grey;
+  font-size: large;
+ }
+ 
+ @keyframes blink {
+   from, to { opacity: 0; }
+   
+   50% {opacity: 1;}
+ }
+
+
+
+/* Tech Stack Styles */
+
+.list {
+  padding: 0px;
+}
+
+.frontEnd { 
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 25%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.frontEnd li {
+  text-align: center;
+  list-style: none;
+  padding: 20px;
+  border-radius: 15px;
+  word-wrap: break-word;
+}
+
+.frontEnd li:hover {
+  box-shadow: 0 0 75px rgb(205, 110, 205); 
+  transition: ease-in-out 0.5s;
+  scale: 1.1;
+}
+
+.frontEnd h2 {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 3px solid white;
+  word-wrap: break-word;
+}
+
+.backEnd { 
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 25%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.backEnd li {
+  text-align: center;
+  list-style: none;
+  padding: 20px;
+  border-radius: 15px;
+  word-wrap: break-word;
+}
+
+.backEnd li:hover {
+  box-shadow: 0 0 75px rgb(205, 110, 205); 
+  transition: ease-in-out 0.5s;
+  scale: 1.1;
+}
+
+.backEnd h2 {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid white;
+  word-wrap: break-word;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.icons img {
+  scale: 1.5;
+  margin: 50px;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+.icons img:hover {
+  box-shadow: 0 0 100px rgb(205, 110, 205);
+  filter: drop-shadow(0 0 75px rgb(205, 110, 205));
+  transition: ease-in-out 0.5s;
+  scale: 1.7;
+  animation: pulse 4s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+		box-shadow: 0 0 75px rgba(205, 110, 205);
+	}
+
+	50% {
+		box-shadow: 0 0 100px rgba(158, 32, 158);
+	}
+
+	100% {
+		box-shadow: 0 0 75px rgba(205, 110, 205);
+	}
+}
+
+
+.tech {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  justify-items: center;
+  background-color: #222;
+  min-height: 75vh;
+  background-image: linear-gradient(180deg, #1f1d25, #121212)
+}
+
+
+/* Project Styles */
+
+
+.projectContainer {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-around;
+  align-items: center;
+  min-height: 75vh;
+}
+
+.projectContainer h2 {
+  margin: 10px;
+  padding: 50px;
+  border-bottom: 4px solid white;
+}
+
+.projects {
+  margin: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.buttonCenter {
+  position: relative;
+  width: 40%;
+  left: 30%;
+  border-radius: 10px;
+}
+
+.buttonCenter:hover {
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  background-color: rgb(69, 33, 112);
+
+}
+
+.fish {
+  scale: 0.4;
+}
+
+/* Contact Stylings */
+
+.contact {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  position: relative;
+  top: 5px;
+  left: 40px;
+}
+
+.contactForm {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  margin: 40px;
+}
