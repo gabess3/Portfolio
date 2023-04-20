@@ -6,6 +6,7 @@ import nodeIcon from '../images/nodejs.jpg';
 import mysqlIcon from '../images/mysql.jpg';
 import mongodbIcon from '../images/mongodb.jpg';
 import expressIcon from '../images/express-js-icon.png';
+import Paper from '@mui/material/Paper';
 
 
 export default function TechStack() {
@@ -43,18 +44,22 @@ export default function TechStack() {
           )}
         </ul>
       </div>
-      <div className='icons'>
-        <img src={HtmlIcon} alt="html icon" width='40px' height="40px"></img>
-        <img src={CssIcon} alt="css icon" width='40px' height="40px"></img>
-        <img src={JavascriptIcon} alt="javascript icon" width='40px' height="40px"></img>
-        <img src={reactIcon} alt="react icon" width='40px' height="40px"></img>
-      </div>
-      <div className='icons'>
-        <img src={nodeIcon} alt="html icon" width='40px' height="40px"></img>
-        <img src={expressIcon} alt="javascript icon" width='40px' height="40px" style={{backgroundColor: 'white'}}></img>
-        <img src={mysqlIcon} alt="javascript icon" width='40px' height="40px"></img>
-        <img src={mongodbIcon} alt="css icon" width='40px' height="40px"></img>
-      </div>
+      <Paper elevation={8}>
+        <div className='icons'>
+          <img src={HtmlIcon} alt="html icon" width='40px' height="40px"></img>
+          <img src={CssIcon} alt="css icon" width='40px' height="40px"></img>
+          <img src={JavascriptIcon} alt="javascript icon" width='40px' height="40px"></img>
+          <img src={reactIcon} alt="react icon" width='40px' height="40px"></img>
+        </div>
+      </Paper>
+      <Paper elevation={8}>
+        <div className='icons'>
+          <img src={nodeIcon} alt="html icon" width='40px' height="40px"></img>
+          <img src={expressIcon} alt="javascript icon" width='40px' height="40px" style={{backgroundColor: 'white'}}></img>
+          <img src={mysqlIcon} alt="javascript icon" width='40px' height="40px"></img>
+          <img src={mongodbIcon} alt="css icon" width='40px' height="40px"></img>
+        </div>
+      </Paper>
     </div>
   )
 }

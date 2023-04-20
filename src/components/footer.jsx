@@ -7,6 +7,7 @@ import ArrowCircleUpTwoToneIcon from '@mui/icons-material/ArrowCircleUpTwoTone';
 
 export default function Footer() {
 	return (
+		<>
 			<Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', p: 2.5, backgroundColor: 'black'}}>
 				<div className='contact'>
 					<Link href='https://github.com/gabess3' target="_blank" sx={{ mr: 5 }}>
@@ -20,8 +21,9 @@ export default function Footer() {
 					</Link>
 				</div>
 				<Link href='#'>
-					<ArrowCircleUpTwoToneIcon sx={{ fontSize: 50, position: 'relative', left: 700, bottom: 100 }}/>
+						<ArrowCircleUpTwoToneIcon sx={{ fontSize: 50, position: 'relative', left: 100 }}/>
 				</Link>	
 			</Box>
+		</>
 	)
 }

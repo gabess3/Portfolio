@@ -35,7 +35,6 @@ function Header() {
         <Toolbar disableGutters>
           <TerminalIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 50}} />
           <Typography
-            variant="h6"
             noWrap
             component="a"
             href="/"
@@ -44,8 +43,9 @@ function Header() {
               p: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Monaco',
-              fontWeight: 700,
-              letterSpacing: '.2rem',
+              fontWeight: 600,
+              fontSize: 22,
+              letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
             }}

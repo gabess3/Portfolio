@@ -70,7 +70,7 @@
 .terminal {
   animation: blink 1s infinite step-end;
   background-color: grey;
-  font-size: large;
+  font-size: x-large;
  }
  
  @keyframes blink {
@@ -155,7 +155,6 @@
   align-content: space-evenly;
   padding: 10px;
   margin: 10px;
-  border: 1px solid white;
   border-radius: 10px;
 }
 
