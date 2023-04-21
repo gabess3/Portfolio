@@ -15,35 +15,36 @@ export default function contactForm() {
     const email = emailInput.value;
     const emailWarning = document.getElementById('emailRequired');
     if(validateEmail(email)) {
-      emailWarning.innerHTML = '';
+      console.log('yay')
+      emailWarning.textContent = '';
     } else 
       emailWarning.setAttribute('class', 'contactAlert')
-      emailWarning.innerHTML = "*This is a required field. Please enter a valid email address.";
+      emailWarning.textContent = "*This is a required field. Please enter a valid email address.";
     };
 
   const handleName = () => {
     const nameInput = document.getElementById('name');
     const name = nameInput.value;
     const nameWarning = document.getElementById('nameRequired')
-    if (name) {
-      nameWarning.innerHTML = '';
-    } else if (!name)
+    if (name.length>0) {
+      nameWarning.textContent = '';
+    } else if (name.length===0)
     nameWarning.setAttribute('class', 'contactAlert')
-    nameWarning.innerHTML = "*This is a required field. Please enter your name."
+    nameWarning.textContent = "*This is a required field. Please enter your name."
   };
 
   const handleMessage = () => {
     const messageInput = document.getElementById('standard-multiline-flexible')
     const message = messageInput.value;
     const messageWarning = document.getElementById('messageRequired')
-    if (message) {
-      messageWarning.innerHTML = '';
-    } else if (!message)
-    messageWarning.setAttribute('class', 'contactAlert')
-    messageWarning.innerHTML = "*This is a required field. Please enter a message to send in your email."
+    if (message.length > 0) {
+      messageWarning.textContent = '';
+    } else if (message.length===0)
+      messageWarning.setAttribute('class', 'contactAlert')
+      messageWarning.textContent = "*This is a required field. Please enter a message to send in your email."
   };
 
-  const submitHandler = function() {
+  const submitHandler = () => {
     handleEmail();
     handleName();
     handleMessage();
@@ -61,7 +62,7 @@ export default function contactForm() {
       </FormControl>
       <FormControl sx={{ width: 300, m:5 }}>
         <InputLabel htmlFor="my-input" required={true}>Email address</InputLabel>
-        <Input id="email" aria-describedby="my-helper-text" />
+        <Input id="email" aria-describedby="my-helper-text" onChange={handleEmail} />
         <p id='emailRequired'></p>
       </FormControl>
       <TextField

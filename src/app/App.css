@@ -17,9 +17,9 @@
 
 .container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  justify-items: center;
+  flex-flow: column wrap;
+  align-content: space-evenly;
+  align-items: center;
   padding: 40px;
 }
 
@@ -43,19 +43,21 @@
   background-color: transparent;
   border-radius: 15px;
   animation: fadeIn 3s;
-  padding: 10px;
   font-size: 22px;
   font-family: "FiraMono";
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .about p {
-  margin-top: 120px;
-  margin-bottom: 120px;
-  width: 50%;
   animation: fadeIn 3s;
   font-size: medium;
   font-family: "FiraMono";
   text-align: center;
+  word-wrap: break-word;
+  padding: 175px;
 }
 
 @keyframes fadeIn {
@@ -99,6 +101,15 @@
   border-radius: 10px;
 }
 
+.frontEnd h2 {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 3px solid white;
+  word-wrap: break-word;
+  font-family: "Poppins";
+  font-size: 4vh;
+}
+
 .frontEnd li {
   text-align: center;
   list-style: none;
@@ -108,7 +119,7 @@
   border: 1px dotted grey;
   margin: 5px;
   font-family: "FiraMono";
-  font-size: 20px;
+  font-size: 2vh;
 }
 
 .frontEnd li:hover {
@@ -117,14 +128,6 @@
   color: lightgreen
 }
 
-.frontEnd h2 {
-  text-align: center;
-  padding: 15px;
-  border-bottom: 3px solid white;
-  word-wrap: break-word;
-  font-family: "Poppins";
-  font-size: 35px;
-}
 
 .backEnd { 
   display: flex;
@@ -133,6 +136,15 @@
   width: 25%;
   padding: 10px;
   border-radius: 10px;
+}
+
+.backEnd h2 {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px solid white;
+  word-wrap:break-word;
+  font-family: "Poppins";
+  font-size: 4vh;
 }
 
 .backEnd li {
@@ -144,7 +156,7 @@
   word-wrap: break-word;
   border: 1px dotted grey;
   font-family: "FiraMono";
-  font-size: 20px;
+  font-size: 2vh;
 }
 
 .backEnd li:hover {
@@ -154,14 +166,7 @@
   color: lightgreen
 }
 
-.backEnd h2 {
-  text-align: center;
-  padding: 10px;
-  border-bottom: 3px solid white;
-  word-wrap: break-word;
-  font-family: "Poppins";
-  font-size: 35px;
-}
+
 
 .icons {
   display: flex;
