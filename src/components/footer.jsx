@@ -8,16 +8,16 @@ import ArrowCircleUpTwoToneIcon from '@mui/icons-material/ArrowCircleUpTwoTone';
 export default function Footer() {
 	return (
 		<>
-			<Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', p: 2.5, backgroundColor: 'black'}}>
+			<Box className="footer">
 				<div className='contact'>
 					<Link href='https://github.com/gabess3' target="_blank" sx={{ mr: 5 }}>
-							<GitHubIcon fontSize='large' sx={{ color: "white"}}/>
+							<GitHubIcon className='footerIcon' fontSize='large'/>
 					</Link>
 					<Link href='https://www.linkedin.com/in/gabriel-ess/' target="_blank" sx={{ mr: 5 }}>
-							<LinkedInIcon fontSize='large' sx={{ color: "white"}}/>
+							<LinkedInIcon className='footerIcon' fontSize='large'/>
 					</Link>
 					<Link href='https://www.facebook.com/profile.php?id=100073633111599' target="_blank" sx={{ mr: 5 }}>
-							<FacebookIcon fontSize='large' sx={{ color: "white"}} />
+							<FacebookIcon className='footerIcon' fontSize='large'/>
 					</Link>
 				</div>
 				<Link href='#'>

@@ -30,7 +30,7 @@ function Header() {
 
 
   return (
-    <AppBar position="sticky">
+    <AppBar sx={{ backgroundColor: "black" }} position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <TerminalIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 50}} />
@@ -39,7 +39,7 @@ function Header() {
             component="a"
             href="/"
             sx={{
-              m: 2,
+              m: 1,
               p: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Monaco',
@@ -126,6 +126,7 @@ function Header() {
                 <Button
                 key={page}
                 onClick={handleCloseNavMenu}
+                className='navigation'
                 sx={{ m: 2, color: 'white', display: 'block', textDecoration: 'none', fontFamily: 'FiraMono', fontSize: 17, textTransform: 'lowercase' }}
                 href={resume}
                 target="_blank"

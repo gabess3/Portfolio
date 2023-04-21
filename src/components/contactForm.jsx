@@ -5,39 +5,42 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { validateEmail } from '../utils/emailValidator';
-import Alert from '@mui/material/Alert';
+
 
 
 export default function contactForm() {
 
-  const handleEmail = (event) => {
+  const handleEmail = () => {
     const emailInput = document.getElementById('email');
     const email = emailInput.value;
     const emailWarning = document.getElementById('emailRequired');
     if(validateEmail(email)) {
       emailWarning.innerHTML = '';
     } else 
-      emailWarning.innerHTML = "This is a required field. Please enter a valid email address.";
+      emailWarning.setAttribute('class', 'contactAlert')
+      emailWarning.innerHTML = "*This is a required field. Please enter a valid email address.";
     };
 
-  const handleName = (event) => {
+  const handleName = () => {
     const nameInput = document.getElementById('name');
     const name = nameInput.value;
     const nameWarning = document.getElementById('nameRequired')
     if (name) {
       nameWarning.innerHTML = '';
     } else if (!name)
-    nameWarning.innerHTML = "This is a required field. Please enter your name."
+    nameWarning.setAttribute('class', 'contactAlert')
+    nameWarning.innerHTML = "*This is a required field. Please enter your name."
   };
 
-  const handleMessage = (event) => {
+  const handleMessage = () => {
     const messageInput = document.getElementById('standard-multiline-flexible')
     const message = messageInput.value;
     const messageWarning = document.getElementById('messageRequired')
     if (message) {
       messageWarning.innerHTML = '';
     } else if (!message)
-    messageWarning.innerHTML = "This is a required field. Please enter a message to send in your email."
+    messageWarning.setAttribute('class', 'contactAlert')
+    messageWarning.innerHTML = "*This is a required field. Please enter a message to send in your email."
   };
 
   const submitHandler = function() {
@@ -50,7 +53,7 @@ export default function contactForm() {
 
   return (
     <div id='contact' className='contactForm'>
-      <h3>Contact Me!</h3>
+      <h3>Let's Work Together!</h3>
       <FormControl sx={{ width: 300, m:5 }}>
         <InputLabel htmlFor="name" required={true}>Name</InputLabel>
         <Input id="name" aria-describedby="my-helper-name"/>

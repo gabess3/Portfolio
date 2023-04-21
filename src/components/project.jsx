@@ -9,6 +9,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 import employeeTracker from '../images/EmployeeTracker.png';
 import socialNetwork from '../images/socialNetwork.png';
 import fish from '../images/fish.png';
+import FadeInSection from './fadeIn';
 
 
 export default function Project() {
@@ -20,12 +21,14 @@ export default function Project() {
 
     <div className="projectContainer">
       <div id='projects'>
+      <FadeInSection>
         <h2 style={{ fontFamily: 'Poppins', fontSize: 50, marginTop: 150 }}>PROJECTS</h2>
+      </FadeInSection>
       </div>
         <div className='projects'>
         {projects.map((project) => 
-
           (project === "FISH TRACKER") ?
+          <FadeInSection key={project}>
             <Card key={project} sx={{ maxWidth: 345, maxHeight: 420, m: 8}}>
             <CardActionArea>
               <CardMedia 
@@ -50,8 +53,10 @@ export default function Project() {
               </Button>
             </CardActions>
           </Card>
+        </FadeInSection>
         : 
         (project === "SOCIAL NETWORK API") ?
+        <FadeInSection key={project}>
           <Card key={project} sx={{ maxWidth: 345, maxHeight: 420, m: 8}}>
             <CardActionArea>
               <CardMedia
@@ -75,8 +80,10 @@ export default function Project() {
               </Button>
             </CardActions>
           </Card>
+        </FadeInSection>
         : 
         (project === "EMPLOYEE TRACKER") ?
+        <FadeInSection key={project}>
           <Card key={project} sx={{ maxWidth: 345, maxHeight: 420, m: 8}}>
             <CardActionArea>
               <CardMedia
@@ -100,6 +107,7 @@ export default function Project() {
               </Button>
             </CardActions>
           </Card>
+        </FadeInSection>
           :
           <Card key={project} sx={{ maxWidth: 380, maxHeight: 360, m: 8}}>
           <CardActionArea>
