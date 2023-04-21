@@ -14,10 +14,10 @@ export default function Footer() {
 							<GitHubIcon fontSize='large' sx={{ color: "white"}}/>
 					</Link>
 					<Link href='https://www.linkedin.com/in/gabriel-ess/' target="_blank" sx={{ mr: 5 }}>
-							<LinkedInIcon href='' fontSize='large' sx={{ color: "white"}}/>
+							<LinkedInIcon fontSize='large' sx={{ color: "white"}}/>
 					</Link>
-					<Link href='https://www.facebook.com/profile.php?id=100073633111599' sx={{ mr: 5 }}>
-							<FacebookIcon href='' fontSize='large' sx={{ color: "white"}} />
+					<Link href='https://www.facebook.com/profile.php?id=100073633111599' target="_blank" sx={{ mr: 5 }}>
+							<FacebookIcon fontSize='large' sx={{ color: "white"}} />
 					</Link>
 				</div>
 				<Link href='#'>

@@ -32,7 +32,7 @@ export default function TechStack() {
         <h2 style={{ fontFamily: 'FiraMono', fontSize: 35 }}>FRONT END TECHNOLOGIES</h2>
         <ul className='list'>
           {frontEnd.map((tech) =>
-            <li key={tech} style={{ fontFamily: 'FiraMono', fontSize: 25  }}>{tech}</li>
+            <li key={tech} style={{ fontFamily: 'FiraMono', fontSize: 20  }}>{tech}</li>
           )}
         </ul>
       </div>
@@ -40,7 +40,7 @@ export default function TechStack() {
         <h2 style={{ fontFamily: 'FiraMono', fontSize: 35  }}>BACK END TECHNOLOGIES</h2>
         <ul className='list'>
           {backEnd.map((tech) =>
-            <li key={tech} style={{ fontFamily: 'FiraMono', fontSize: 25 }}>{tech}</li>
+            <li key={tech} style={{ fontFamily: 'FiraMono', fontSize: 20 }}>{tech}</li>
           )}
         </ul>
       </div>

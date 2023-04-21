@@ -5,12 +5,14 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { validateEmail } from '../utils/emailValidator';
+import Alert from '@mui/material/Alert';
 
 
 export default function contactForm() {
 
   const handleEmail = (event) => {
-    const email = event.target.value;
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value;
     const emailWarning = document.getElementById('emailRequired');
     if(validateEmail(email)) {
       emailWarning.innerHTML = '';
@@ -19,24 +21,30 @@ export default function contactForm() {
     };
 
   const handleName = (event) => {
-    const name = event.target.value;
+    const nameInput = document.getElementById('name');
+    const name = nameInput.value;
     const nameWarning = document.getElementById('nameRequired')
     if (name) {
       nameWarning.innerHTML = '';
     } else if (!name)
     nameWarning.innerHTML = "This is a required field. Please enter your name."
-  }
+  };
 
   const handleMessage = (event) => {
-    const message = event.target.value;
+    const messageInput = document.getElementById('standard-multiline-flexible')
+    const message = messageInput.value;
     const messageWarning = document.getElementById('messageRequired')
     if (message) {
       messageWarning.innerHTML = '';
     } else if (!message)
     messageWarning.innerHTML = "This is a required field. Please enter a message to send in your email."
-  }
-  
+  };
 
+  const submitHandler = function() {
+    handleEmail();
+    handleName();
+    handleMessage();
+  };
 
 
 
@@ -44,13 +52,13 @@ export default function contactForm() {
     <div id='contact' className='contactForm'>
       <h3>Contact Me!</h3>
       <FormControl sx={{ width: 300, m:5 }}>
-        <InputLabel htmlFor="my-input2" required='true'>Name</InputLabel>
-        <Input id="my-input2" aria-describedby="my-helper-name"/>
-        <p id="nameRequired"></p>
+        <InputLabel htmlFor="name" required={true}>Name</InputLabel>
+        <Input id="name" aria-describedby="my-helper-name"/>
+        <div id="nameRequired"></div>
       </FormControl>
       <FormControl sx={{ width: 300, m:5 }}>
-        <InputLabel htmlFor="my-input" required='true'>Email address</InputLabel>
-        <Input id="my-input" aria-describedby="my-helper-text" />
+        <InputLabel htmlFor="my-input" required={true}>Email address</InputLabel>
+        <Input id="email" aria-describedby="my-helper-text" />
         <p id='emailRequired'></p>
       </FormControl>
       <TextField
@@ -60,11 +68,11 @@ export default function contactForm() {
           multiline
           variant="filled"
           minRows={5}
-          required='true'
+          required={true}
         />
         <p id='messageRequired'></p>
-      <Grid sm={1} align="right">                    
-        <Button variant="contained"  color="primary">                             
+      <Grid align="right">                    
+        <Button id='submit' variant="contained"  color="primary" onClick={submitHandler}>                             
           Submit
         </Button>                                       
       </Grid>

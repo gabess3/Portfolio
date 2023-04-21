@@ -47,6 +47,7 @@
   box-shadow: 0 10px 20px rgb(69, 33, 112);
   border-radius: 15px;
   animation: fadeIn 3s;
+  padding: 10px;
 }
 
 .about p {
@@ -93,7 +94,7 @@
   justify-content: center;
   width: 25%;
   padding: 10px;
-  border: 1px solid white;
+
   border-radius: 10px;
 }
 
@@ -103,6 +104,8 @@
   padding: 20px;
   border-radius: 15px;
   word-wrap: break-word;
+  border: 1px dotted grey;
+  margin: 5px;
 }
 
 .frontEnd li:hover {
@@ -124,7 +127,6 @@
   justify-content: center;
   width: 25%;
   padding: 10px;
-  border: 1px solid white;
   border-radius: 10px;
 }
 
@@ -132,8 +134,10 @@
   text-align: center;
   list-style: none;
   padding: 20px;
+  margin: 5px;
   border-radius: 15px;
   word-wrap: break-word;
+  border: 1px dotted grey;
 }
 
 .backEnd li:hover {
@@ -163,12 +167,13 @@
   margin: 50px;
   padding: 2px;
   border-radius: 15px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .icons img:hover {
+  transition: ease-in-out 0.5s;
   box-shadow: 0 0 100px rgb(205, 110, 205);
   filter: drop-shadow(0 0 75px rgb(205, 110, 205));
-  transition: ease-in-out 0.5s;
   scale: 1.7;
   animation: pulse 4s infinite linear;
 }
