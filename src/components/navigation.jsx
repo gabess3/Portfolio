@@ -92,6 +92,27 @@ function Header() {
                   </Link>
                 </MenuItem>
                 :
+                (page === 'About') ?
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Link href='#about' sx={{ textDecoration: 'none', color: 'white' }}>
+                    <Typography  sx={{ p: 10, color: 'white', textDecoration: 'none', fontFamily: 'FiraMono', textTransform: 'lowercase'}} textAlign="center">{page}</Typography>
+                  </Link>
+                </MenuItem>
+                :
+                (page === 'Projects') ?
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Link href='#projects' sx={{ textDecoration: 'none', color: 'white' }}>
+                    <Typography  sx={{ p: 10, color: 'white', textDecoration: 'none', fontFamily: 'FiraMono', textTransform: 'lowercase'}} textAlign="center">{page}</Typography>
+                  </Link>
+                </MenuItem>
+                :
+                (page === 'Contact') ?
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Link href='#contact' sx={{ textDecoration: 'none', color: 'white' }}>
+                    <Typography  sx={{ p: 10, color: 'white', textDecoration: 'none', fontFamily: 'FiraMono', textTransform: 'lowercase'}} textAlign="center">{page}</Typography>
+                  </Link>
+                </MenuItem>
+                :
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography sx={{ p: 10}} textAlign="center">{page}</Typography>
                 </MenuItem>

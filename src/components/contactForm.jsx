@@ -5,14 +5,21 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { validateEmail } from '../utils/emailValidator';
+import { useState } from 'react';
 
 
 
-export default function contactForm() {
+export default function ContactForm() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+
 
   const handleEmail = () => {
     const emailInput = document.getElementById('email');
-    const email = emailInput.value;
+    setEmail(emailInput.value);
     const emailWarning = document.getElementById('emailRequired');
     if(validateEmail(email)) {
       console.log('yay')
@@ -24,7 +31,8 @@ export default function contactForm() {
 
   const handleName = () => {
     const nameInput = document.getElementById('name');
-    const name = nameInput.value;
+    setName(nameInput.value)
+    console.log(name)
     const nameWarning = document.getElementById('nameRequired')
     if (name.length>0) {
       nameWarning.textContent = '';
@@ -35,7 +43,7 @@ export default function contactForm() {
 
   const handleMessage = () => {
     const messageInput = document.getElementById('standard-multiline-flexible')
-    const message = messageInput.value;
+    setMessage(messageInput.value);
     const messageWarning = document.getElementById('messageRequired')
     if (message.length > 0) {
       messageWarning.textContent = '';
@@ -49,7 +57,6 @@ export default function contactForm() {
     handleName();
     handleMessage();
   };
-
 
 
   return (
