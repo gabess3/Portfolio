@@ -17,7 +17,7 @@ export default function ContactForm() {
 
 
 
-  const handleEmail = () => {
+  const handleEmail = (event) => {
     const emailInput = document.getElementById('email');
     setEmail(emailInput.value);
     const emailWarning = document.getElementById('emailRequired');
@@ -83,7 +83,7 @@ export default function ContactForm() {
 
   return (
     <div id='contact' className='contactForm'>
-      <h3>Let's Work Together!</h3>
+      <h3>/contact</h3>
       <FormControl sx={{ width: 300, m:5 }}>
         <InputLabel htmlFor="name" required={true}>Name</InputLabel>
         <Input id="name" aria-describedby="my-helper-name" value={name} onChange={changeName}/>

@@ -28,6 +28,10 @@ export default function TechStack() {
   ]
 
   return (
+    <div className='techContainer'>
+    <FadeInSection>
+    <h2 className='techStack'>/techStack</h2>
+    </FadeInSection>
     <div className='tech'>
 
       <div className='frontEnd'>
@@ -74,6 +78,7 @@ export default function TechStack() {
         </div>
       </Paper>
       </FadeInSection>
+    </div>
     </div>
   )
 }

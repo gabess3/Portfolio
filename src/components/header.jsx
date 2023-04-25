@@ -1,10 +1,8 @@
-import Navigation from './navigation';
 import '../fonts/FiraMono-Regular.ttf'
 
 export default function Header() {
 	return (
 			<>
-					<Navigation />
 					<header className="App-header">
 							<div id='about' className='container'>
 								{/* <img src={profile} alt='profile pic' ></img> */}

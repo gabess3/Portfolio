@@ -217,6 +217,20 @@
   background-image: linear-gradient(180deg, #1f1d25, #121212)
 }
 
+.techStack {
+  text-align: center;
+  background-color: rgb(4, 4, 20);
+  padding: 10px;
+  word-wrap:break-word;
+  font-family: "Poppins";
+  font-size: 4vh;
+}
+
+.techContainer {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 
 /* Project Styles */
 

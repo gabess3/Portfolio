@@ -22,7 +22,7 @@ export default function Project() {
     <div className="projectContainer">
       <div id='projects'>
       <FadeInSection>
-        <h2 style={{ fontFamily: 'Poppins', fontSize: 50, marginTop: 150 }}>PROJECTS</h2>
+        <h2 style={{ fontFamily: 'Poppins', fontSize: 50, marginTop: 150 }}>/projects</h2>
       </FadeInSection>
       </div>
         <div className='projects'>
