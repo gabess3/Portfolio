@@ -15,7 +15,7 @@ import FadeInSection from './fadeIn';
 export default function Project() {
 
   const projects = ['FISH TRACKER', 'SOCIAL NETWORK API', 'EMPLOYEE TRACKER'];
-  const projectLink = ['https://github.com/gabess3/Social-Network-API', 'https://github.com/gabess3/Employee-Tracker']
+  const projectLink = ['https://github.com/gabess3/Social-Network-API', 'https://github.com/gabess3/Employee-Tracker', 'https://github.com/NTumminaro/ACGC-Golden-Rod-Pro']
 
   return (
 
@@ -48,7 +48,7 @@ export default function Project() {
               </CardContent>
             </CardActionArea>
             <CardActions className="buttonCenter">
-              <Button href='#' target="_blank" size="small" color="primary">
+              <Button href={projectLink[2]} target="_blank" size="small" color="primary">
                 Open in GitHub
               </Button>
             </CardActions>
