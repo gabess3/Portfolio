@@ -43,6 +43,8 @@
   background-color: transparent;
   border-radius: 15px;
   animation: fadeIn 3s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
   font-size: 22px;
   font-family: "FiraMono";
   padding-left: 50px;
@@ -53,6 +55,8 @@
 
 .about p {
   animation: fadeIn 3s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   font-size: medium;
   font-family: "FiraMono";
   text-align: center;
@@ -174,6 +178,7 @@
   align-content: space-evenly;
   padding: 10px;
   margin: 10px;
+  margin-top: 40px;
   border-radius: 10px;
 }
 
@@ -219,7 +224,7 @@
 
 .techStack {
   text-align: center;
-  background-color: rgb(4, 4, 20);
+  background-color: transparent;
   padding: 10px;
   word-wrap:break-word;
   font-family: "Poppins";
