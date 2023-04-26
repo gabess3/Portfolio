@@ -55,8 +55,7 @@ export default function Project() {
                       variant="body2"
                       color="text.secondary"
                     >
-                      Here will be a description of the fish project with
-                      various details about it.
+                      This is a project that tracks the location of Fish in the GameCube game Animal Crossing. This information is used for Speedrunners. This was created with React / Vite.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
