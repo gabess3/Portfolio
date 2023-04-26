@@ -37,7 +37,7 @@ function Header() {
           <Typography
             noWrap
             component="a"
-            href="/"
+            href="/Portfolio"
             sx={{
               m: 1,
               p: 2,
