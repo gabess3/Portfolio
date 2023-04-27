@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.61ebdc3a.css",
-    "main.js": "/Portfolio/static/js/main.8f95af3b.js",
+    "main.css": "/Portfolio/static/css/main.d6a5dbb6.css",
+    "main.js": "/Portfolio/static/js/main.abb48ddb.js",
     "static/media/socialNetwork.png": "/Portfolio/static/media/socialNetwork.67fdfde9e142b879c5a4.png",
     "static/media/FiraMono-Regular.ttf": "/Portfolio/static/media/FiraMono-Regular.7534a76c5a021a6aae2f.ttf",
     "static/media/EmployeeTracker.png": "/Portfolio/static/media/EmployeeTracker.2698d955d8313e79db7d.png",
@@ -14,11 +14,11 @@
     "static/media/mongodb.jpg": "/Portfolio/static/media/mongodb.dd2d5a85d3d61b0111be.jpg",
     "static/media/css3.png": "/Portfolio/static/media/css3.68ba79f50e3278164cb8.png",
     "index.html": "/Portfolio/index.html",
-    "main.61ebdc3a.css.map": "/Portfolio/static/css/main.61ebdc3a.css.map",
-    "main.8f95af3b.js.map": "/Portfolio/static/js/main.8f95af3b.js.map"
+    "main.d6a5dbb6.css.map": "/Portfolio/static/css/main.d6a5dbb6.css.map",
+    "main.abb48ddb.js.map": "/Portfolio/static/js/main.abb48ddb.js.map"
   },
   "entrypoints": [
-    "static/css/main.61ebdc3a.css",
-    "static/js/main.8f95af3b.js"
+    "static/css/main.d6a5dbb6.css",
+    "static/js/main.abb48ddb.js"
   ]
 }
