@@ -106,7 +106,7 @@ export default function ContactForm() {
         <p id="emailRequired"></p>
       </FormControl>
       <TextField
-        sx={{ width: 500, m: 5 }}
+        sx={{ width: 300, m: 5 }}
         id="standard-multiline-flexible"
         label="Message content"
         multiline

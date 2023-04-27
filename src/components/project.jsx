@@ -23,7 +23,7 @@ export default function Project() {
     <div className="projectContainer">
       <div id="projects">
         <FadeInSection>
-          <h2 style={{ fontFamily: "Poppins", fontSize: 50, marginTop: 150 }}>
+          <h2 style={{ fontFamily: "Poppins", fontSize: 40, marginTop: 150 }}>
             /projects
           </h2>
         </FadeInSection>
@@ -51,7 +51,7 @@ export default function Project() {
                       {project}
                     </Typography>
                     <Typography
-                      sx={{ fontFamily: "Poppins", textAlign: "center" }}
+                      sx={{ fontFamily: "Poppins", textAlign: "center", fontSize: 12  }}
                       variant="body2"
                       color="text.secondary"
                     >
@@ -91,7 +91,7 @@ export default function Project() {
                       {project}
                     </Typography>
                     <Typography
-                      sx={{ fontFamily: "Poppins", textAlign: "center" }}
+                      sx={{ fontFamily: "Poppins", textAlign: "center", fontSize: 12 }}
                       variant="body2"
                       color="text.secondary"
                     >
@@ -134,16 +134,14 @@ export default function Project() {
                       {project}
                     </Typography>
                     <Typography
-                      sx={{ fontFamily: "Poppins", textAlign: "center" }}
+                      sx={{ fontFamily: "Poppins", textAlign: "center", fontSize: 12  }}
                       variant="body2"
                       color="text.secondary"
                     >
                       This application is used for interacting with a SQL
-                      database via the terminal. This was built using nodejs
-                      with the inquirer package for user prompts, MySQL to
-                      establish a connection with and to query the database, and
-                      the console.table package to display query results in the
-                      command line.
+                      database via the terminal using nodejs
+                      / inquirer package, MySQL, and
+                      the console.table package.
                     </Typography>
                   </CardContent>
                 </CardActionArea>

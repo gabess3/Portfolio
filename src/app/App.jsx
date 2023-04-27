@@ -5,15 +5,17 @@ import TechStack from "../components/techStack";
 import Project from "../components/project";
 import ContactForm from "../components/contactForm";
 import Navigation from "../components/navigation";
+import ScrollToTop from "../components/scrollToTop";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navigation />
       <Header />
       <TechStack />
       <Project />
       <ContactForm />
+      <ScrollToTop />
       <Footer />
     </div>
   );

@@ -6,32 +6,22 @@
 
 .App-header {
   background-image: linear-gradient(360deg, #1f1d25, rgb(4, 4, 20));
-  /* background-image: url(../images/carbon-fiber-texture-wallpaper-preview.jpg); */
   background-size: cover;
   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
   color: white;
-  padding: 40px;
   text-align: center;
 }
 
 .container {
   display: flex;
   flex-flow: column wrap;
-  align-content: space-evenly;
+  align-content: space-around;
   align-items: center;
-  padding: 40px;
-}
-
-.about {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
 }
 
 .about h1 {
-  font-size: 15vh;
-  margin-top: 100px;
+  font-size: 10vw;
+  margin-top: 200px;
   animation: fadeIn 3s;
   font-family: "Poppins";
   letter-spacing: 2.2px;
@@ -53,15 +43,18 @@
   padding-bottom: 5px;
 }
 
-.about p {
+.aboutMe {
   animation: fadeIn 3s;
   animation-delay: 2s;
   animation-fill-mode: both;
-  font-size: medium;
+  font-size: 100%;
   font-family: "FiraMono";
-  text-align: center;
-  word-wrap: break-word;
-  padding: 175px;
+  border:1px solid rgb(69, 33, 112);
+  word-break: keep-all;
+  margin: 100px;
+  margin-top: 150px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 @keyframes fadeIn {
@@ -95,35 +88,46 @@
   padding: 0px;
 }
 
+.tech {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  justify-items: center;
+  background-color: #222;
+  min-height: 75vh;
+  background-image: linear-gradient(180deg, #1f1d25, #121212);
+  border:1px solid rgb(69, 33, 112);
+}
+
+
 .frontEnd { 
   display: flex;
   flex-flow: column;
   justify-content: center;
   width: 25%;
   padding: 10px;
-
   border-radius: 10px;
 }
 
 .frontEnd h2 {
   text-align: center;
-  padding: 15px;
+  padding: 5px;
   border-bottom: 3px solid white;
-  word-wrap: break-word;
+  word-wrap: normal;
   font-family: "Poppins";
-  font-size: 4vh;
+  font-size: 2.5vw;
 }
 
 .frontEnd li {
   text-align: center;
   list-style: none;
-  padding: 20px;
+  padding: 13px;
   border-radius: 15px;
-  word-wrap: break-word;
+  word-wrap:normal;
   border: 1px dotted grey;
   margin: 5px;
   font-family: "FiraMono";
-  font-size: 2vh;
+  font-size: 1.75vw;
 }
 
 .frontEnd li:hover {
@@ -144,23 +148,23 @@
 
 .backEnd h2 {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   border-bottom: 3px solid white;
-  word-wrap:break-word;
+  word-wrap: normal;
   font-family: "Poppins";
-  font-size: 4vh;
+  font-size: 2.5vw;
 }
 
 .backEnd li {
   text-align: center;
   list-style: none;
-  padding: 20px;
+  padding: 13px;
   margin: 5px;
   border-radius: 15px;
   word-wrap: break-word;
   border: 1px dotted grey;
   font-family: "FiraMono";
-  font-size: 2vh;
+  font-size: 1.75vw;
 }
 
 .backEnd li:hover {
@@ -174,18 +178,15 @@
 
 .icons {
   display: flex;
-  flex-direction: column;
-  align-content: space-evenly;
-  padding: 10px;
-  margin: 10px;
+  flex-direction: row wrap;
+  justify-content: space-evenly;
+  justify-items: center;
   margin-top: 40px;
   border-radius: 10px;
 }
 
 .icons img {
-  scale: 1.5;
-  margin: 50px;
-  padding: 2px;
+  margin: 4px;
   border-radius: 15px;
   box-shadow: 5px 5px 5px black;
 }
@@ -209,31 +210,6 @@
 	100% {
 		box-shadow: 0 0 50px rgba(205, 110, 205);
 	}
-}
-
-
-.tech {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  justify-items: center;
-  background-color: #222;
-  min-height: 75vh;
-  background-image: linear-gradient(180deg, #1f1d25, #121212)
-}
-
-.techStack {
-  text-align: center;
-  background-color: transparent;
-  padding: 10px;
-  word-wrap:break-word;
-  font-family: "Poppins";
-  font-size: 4vh;
-}
-
-.techContainer {
-  display: flex;
-  flex-flow: column wrap;
 }
 
 
@@ -281,19 +257,6 @@
 
 /* Contact Stylings */
 
-.contact {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  position: relative;
-  top: 5px;
-  left: 40px;
-}
-
-.contactForm h3 {
-  font-size: 60px;
-}
-
 .contactForm {
   display: flex;
   flex-flow: column wrap;
@@ -301,6 +264,10 @@
   align-items: center;
   padding: 20px;
   margin: 40px;
+}
+
+.contactForm h3 {
+  font-size: 60px;
 }
 
 .contactAlert {
@@ -313,7 +280,7 @@
 .footer {
   display: flex; 
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
   padding: 20px; 
   background-color: black
 }
