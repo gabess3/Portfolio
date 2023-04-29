@@ -1,21 +1,27 @@
 // Uses Material UI AppBar component
 
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-import resume from "../images/Resumé.pdf";
-import Link from "@mui/material/Link";
-import TerminalIcon from "@mui/icons-material/Terminal";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import resume from '../images/Resumé.pdf';
+import Link from '@mui/material/Link';
+import TerminalIcon from '@mui/icons-material/Terminal';
 
-const pages = ["About", "Projects", "Resumé", "Contact"];
+/* target will be undefined on all except resume, being the same as not listing it in the component */
+const pageLinks = [
+  { title: 'About', href: '#about' },
+  { title: 'Projects', href: '#projects' },
+  { title: 'Resumé', href: resume, target: '_blank' },
+  { title: 'Contact', href: '#contact' },
+];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,12 +35,10 @@ function Header() {
   };
 
   return (
-    <AppBar sx={{ backgroundColor: "black" }} position="sticky">
+    <AppBar sx={{ backgroundColor: 'black' }} position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <TerminalIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1, fontSize: 50 }}
-          />
+          <TerminalIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fontSize: 50 }} />
           <Typography
             noWrap
             component="a"
@@ -42,19 +46,19 @@ function Header() {
             sx={{
               m: 1,
               p: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Monaco",
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'Monaco',
               fontWeight: 600,
               fontSize: 22,
-              letterSpacing: ".1rem",
-              color: "inherit",
-              textDecoration: "none",
+              letterSpacing: '.1rem',
+              color: 'inherit',
+              textDecoration: 'none',
             }}
           >
             ./root<span className="terminal">_</span>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -69,117 +73,44 @@ function Header() {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {/* Creates nav items on xs displays */}
-
-              {pages.map((page) =>
-                page === "Resumé" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href={resume}
-                      target="_blank"
-                      sx={{ textDecoration: "none", color: "white" }}
-                    >
+              {pageLinks.map(({ title, href, target }) => {
+                return (
+                  <MenuItem key={title} onClick={handleCloseNavMenu}>
+                    <Link href={href} target={target} sx={{ textDecoration: 'none', color: 'white' }}>
                       <Typography
                         sx={{
                           p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
+                          color: 'white',
+                          textDecoration: 'none',
+                          fontFamily: 'FiraMono',
+                          textTransform: 'lowercase',
                         }}
                         textAlign="center"
                       >
-                        {page}
+                        {title}
                       </Typography>
                     </Link>
                   </MenuItem>
-                ) : page === "About" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href="#about"
-                      sx={{ textDecoration: "none", color: "white" }}
-                    >
-                      <Typography
-                        sx={{
-                          p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
-                        }}
-                        textAlign="center"
-                      >
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ) : page === "Projects" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href="#projects"
-                      sx={{ textDecoration: "none", color: "white" }}
-                    >
-                      <Typography
-                        sx={{
-                          p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
-                        }}
-                        textAlign="center"
-                      >
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ) : page === "Contact" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href="#contact"
-                      sx={{ textDecoration: "none", color: "white" }}
-                    >
-                      <Typography
-                        sx={{
-                          p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
-                        }}
-                        textAlign="center"
-                      >
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ) : (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography sx={{ p: 10 }} textAlign="center">
-                      {page}
-                    </Typography>
-                  </MenuItem>
-                )
-              )}
+                );
+              })}
             </Menu>
           </Box>
-          <TerminalIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1, scale: 1.5 }}
-          />
+          <TerminalIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, scale: 1.5 }} />
           <Typography
             variant="h5"
             noWrap
@@ -187,13 +118,13 @@ function Header() {
             href=""
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: ".2rem",
-              color: "inherit",
-              textDecoration: "none",
+              letterSpacing: '.2rem',
+              color: 'inherit',
+              textDecoration: 'none',
             }}
           >
             Gabriel Ess
@@ -201,84 +132,32 @@ function Header() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", justifyContent: "center" },
+              display: { xs: 'none', md: 'flex', justifyContent: 'center' },
             }}
           >
             {/* Creates nav items on medium displays */}
-
-            {pages.map((page) =>
-              page === "Resumé" ? (
+            {pageLinks.map(({ title, href, target }, index) => {
+              return (
                 <Button
-                  key={page}
+                  key={title}
                   onClick={handleCloseNavMenu}
                   className="navigation"
                   sx={{
                     m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
+                    color: 'white',
+                    display: 'block',
+                    textDecoration: 'none',
+                    fontFamily: 'FiraMono',
                     fontSize: 17,
-                    textTransform: "lowercase",
+                    textTransform: 'lowercase',
                   }}
-                  href={resume}
-                  target="_blank"
+                  href={href}
+                  target={target}
                 >
-                  03/ {page}
+                  0{index + 1}/ {title}
                 </Button>
-              ) : page === "Projects" ? (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
-                    fontSize: 17,
-                    textTransform: "lowercase",
-                  }}
-                  href="#projects"
-                >
-                  02/ {page}
-                </Button>
-              ) : page === "About" ? (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
-                    fontSize: 17,
-                    textTransform: "lowercase",
-                  }}
-                  href="#about"
-                >
-                  01/ {page}
-                </Button>
-              ) : (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
-                    fontSize: 17,
-                    textTransform: "lowercase",
-                  }}
-                  href="#contact"
-                >
-                  04/ {page}
-                </Button>
-              )
-            )}
+              );
+            })}
           </Box>
         </Toolbar>
       </Container>
