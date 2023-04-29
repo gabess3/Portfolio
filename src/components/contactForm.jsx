@@ -1,29 +1,28 @@
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Input from "@mui/material/Input";
-import TextField from "@mui/material/TextField";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
-import { validateEmail } from "../utils/emailValidator";
-import { useState } from "react";
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Input from '@mui/material/Input';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import { validateEmail } from '../utils/emailValidator';
+import { useState } from 'react';
 
 export default function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleEmail = (event) => {
-    const emailInput = document.getElementById("email");
+    const emailInput = document.getElementById('email');
     setEmail(emailInput.value);
-    const emailWarning = document.getElementById("emailRequired");
+    const emailWarning = document.getElementById('emailRequired');
     if (validateEmail(email)) {
-      console.log("yay email");
-      emailWarning.textContent = "";
+      console.log('yay email');
+      emailWarning.textContent = '';
     } else {
-      console.log("bad email");
-      emailWarning.setAttribute("class", "contactAlert");
-      emailWarning.textContent =
-        "*This is a required field. Please enter a valid email address.";
+      console.log('bad email');
+      emailWarning.setAttribute('class', 'contactAlert');
+      emailWarning.textContent = '*This is a required field. Please enter a valid email address.';
     }
   };
 
@@ -33,17 +32,16 @@ export default function ContactForm() {
   };
 
   const handleName = () => {
-    const nameInput = document.getElementById("name");
+    const nameInput = document.getElementById('name');
     setName(nameInput.value);
-    const nameWarning = document.getElementById("nameRequired");
+    const nameWarning = document.getElementById('nameRequired');
     if (name.length > 0) {
-      console.log("yay name");
-      nameWarning.textContent = "";
+      console.log('yay name');
+      nameWarning.textContent = '';
     } else if (name.length === 0) {
-      console.log("bad name");
-      nameWarning.setAttribute("class", "contactAlert");
-      nameWarning.textContent =
-        "*This is a required field. Please enter your name.";
+      console.log('bad name');
+      nameWarning.setAttribute('class', 'contactAlert');
+      nameWarning.textContent = '*This is a required field. Please enter your name.';
     }
   };
 
@@ -53,17 +51,16 @@ export default function ContactForm() {
   };
 
   const handleMessage = () => {
-    const messageInput = document.getElementById("standard-multiline-flexible");
+    const messageInput = document.getElementById('standard-multiline-flexible');
     setMessage(messageInput.value);
-    const messageWarning = document.getElementById("messageRequired");
+    const messageWarning = document.getElementById('messageRequired');
     if (message.length > 0) {
-      console.log("yay message");
-      messageWarning.textContent = "";
+      console.log('yay message');
+      messageWarning.textContent = '';
     } else if (message.length === 0) {
-      console.log("bad message");
-      messageWarning.setAttribute("class", "contactAlert");
-      messageWarning.textContent =
-        "*This is a required field. Please enter a message to send in your email.";
+      console.log('bad message');
+      messageWarning.setAttribute('class', 'contactAlert');
+      messageWarning.textContent = '*This is a required field. Please enter a message to send in your email.';
     }
   };
 
@@ -80,29 +77,19 @@ export default function ContactForm() {
 
   return (
     <div id="contact" className="contactForm">
-      <h3>/contact</h3>
+      <h3>Contact</h3>
       <FormControl sx={{ width: 300, m: 5 }}>
         <InputLabel htmlFor="name" required={true}>
           Name
         </InputLabel>
-        <Input
-          id="name"
-          aria-describedby="my-helper-name"
-          value={name}
-          onChange={changeName}
-        />
+        <Input id="name" aria-describedby="my-helper-name" value={name} onChange={changeName} />
         <p id="nameRequired"></p>
       </FormControl>
       <FormControl sx={{ width: 300, m: 5 }}>
         <InputLabel htmlFor="my-input" required={true}>
           Email address
         </InputLabel>
-        <Input
-          id="email"
-          aria-describedby="my-helper-text"
-          value={email}
-          onChange={changeEmail}
-        />
+        <Input id="email" aria-describedby="my-helper-text" value={email} onChange={changeEmail} />
         <p id="emailRequired"></p>
       </FormControl>
       <TextField
@@ -118,12 +105,7 @@ export default function ContactForm() {
       />
       <p id="messageRequired"></p>
       <Grid align="right">
-        <Button
-          id="submit"
-          variant="contained"
-          color="primary"
-          onClick={submitHandler}
-        >
+        <Button id="submit" variant="contained" color="primary" onClick={submitHandler}>
           Submit
         </Button>
       </Grid>
