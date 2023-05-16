@@ -6,16 +6,16 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import employeeTracker from "../images/EmployeeTracker.png";
+import NoShelfControl from "../images/NoShelfControl.png";
 import socialNetwork from "../images/socialNetwork.png";
 import fish from "../images/fish.png";
 import FadeInSection from "./fadeIn";
 
 export default function Project() {
-  const projects = ["FISH TRACKER", "SOCIAL NETWORK API", "EMPLOYEE TRACKER"];
+  const projects = ["FISH TRACKER", "SOCIAL NETWORK API", "NO SHELF CONTROL"];
   const projectLink = [
     "https://github.com/gabess3/Social-Network-API",
-    "https://github.com/gabess3/Employee-Tracker",
+    "https://github.com/Nick-likes-Rust-and-Next/No-Shelf-Control",
     "https://github.com/NTumminaro/ACGC-Golden-Rod-Pro",
   ];
 
@@ -114,15 +114,15 @@ export default function Project() {
                 </CardActions>
               </Card>
             </FadeInSection>
-          ) : project === "EMPLOYEE TRACKER" ? (
+          ) : project === "NO SHELF CONTROL" ? (
             <FadeInSection key={project}>
               <Card key={project} sx={{ maxWidth: 345, maxHeight: 420, m: 8 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
                     height="140"
-                    image={employeeTracker}
-                    alt="Employee Tracker Project"
+                    image={NoShelfControl}
+                    alt="No Shelf Control"
                   />
                   <CardContent>
                     <Typography
@@ -138,10 +138,7 @@ export default function Project() {
                       variant="body2"
                       color="text.secondary"
                     >
-                      This application is used for interacting with a SQL
-                      database via the terminal using nodejs
-                      / inquirer package, MySQL, and
-                      the console.table package.
+                      This is a MERN stack application that used Apollo/GraphQL and Material UI. 
                     </Typography>
                   </CardContent>
                 </CardActionArea>
