@@ -1,24 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.20fc15f6.css",
-    "main.js": "/Portfolio/static/js/main.c3ab7a81.js",
+    "main.css": "/Portfolio/static/css/main.2b212fe1.css",
+    "main.js": "/Portfolio/static/js/main.9d6b8875.js",
     "static/media/socialNetwork.png": "/Portfolio/static/media/socialNetwork.67fdfde9e142b879c5a4.png",
     "static/media/NoShelfControl.png": "/Portfolio/static/media/NoShelfControl.6c1e91e59f5b1a44873e.png",
     "static/media/FiraMono-Regular.ttf": "/Portfolio/static/media/FiraMono-Regular.7534a76c5a021a6aae2f.ttf",
     "static/media/Resumé.pdf": "/Portfolio/static/media/Resumé.8ab44df9cbb2c461ccaf.pdf",
-    "static/media/react.jpg": "/Portfolio/static/media/react.6ec3eaff5912c6eac01f.jpg",
-    "static/media/nodejs.jpg": "/Portfolio/static/media/nodejs.5d87741b3dfa5a225c70.jpg",
-    "static/media/mysql.jpg": "/Portfolio/static/media/mysql.07c7cd0296f23a2f9071.jpg",
-    "static/media/html5.jpg": "/Portfolio/static/media/html5.346f5502e5da794480ca.jpg",
-    "static/media/javascript.jpg": "/Portfolio/static/media/javascript.3cc4af926b10178a2dbc.jpg",
-    "static/media/mongodb.jpg": "/Portfolio/static/media/mongodb.dd2d5a85d3d61b0111be.jpg",
-    "static/media/css3.png": "/Portfolio/static/media/css3.68ba79f50e3278164cb8.png",
     "index.html": "/Portfolio/index.html",
-    "main.20fc15f6.css.map": "/Portfolio/static/css/main.20fc15f6.css.map",
-    "main.c3ab7a81.js.map": "/Portfolio/static/js/main.c3ab7a81.js.map"
+    "main.2b212fe1.css.map": "/Portfolio/static/css/main.2b212fe1.css.map",
+    "main.9d6b8875.js.map": "/Portfolio/static/js/main.9d6b8875.js.map"
   },
   "entrypoints": [
-    "static/css/main.20fc15f6.css",
-    "static/js/main.c3ab7a81.js"
+    "static/css/main.2b212fe1.css",
+    "static/js/main.9d6b8875.js"
   ]
 }
