@@ -1,11 +1,3 @@
-import JavascriptIcon from "../images/javascript.jpg";
-import HtmlIcon from "../images/html5.jpg";
-import CssIcon from "../images/css3.png";
-import reactIcon from "../images/react.jpg";
-import nodeIcon from "../images/nodejs.jpg";
-import mysqlIcon from "../images/mysql.jpg";
-import mongodbIcon from "../images/mongodb.jpg";
-import expressIcon from "../images/express-js-icon.png";
 import FadeInSection from "./fadeIn";
 
 export default function TechStack() {
@@ -16,8 +8,7 @@ export default function TechStack() {
   return (
     <>
       <div className="tech">
-
-        <div className="frontEnd">
+        <div className="techStack">
           <FadeInSection>
             <h2>FRONT END TECHNOLOGIES</h2>
           </FadeInSection>
@@ -30,7 +21,7 @@ export default function TechStack() {
           </FadeInSection>
         </div>
 
-        <div className="backEnd">
+        <div className="techStack">
           <FadeInSection>
             <h2>BACK END TECHNOLOGIES</h2>
           </FadeInSection>
@@ -43,7 +34,7 @@ export default function TechStack() {
           </FadeInSection>
         </div>
       </div>
-      <FadeInSection>
+      {/* <FadeInSection>
         <div className="icons">
           <img src={HtmlIcon} alt="html icon" width="40px" height="40px"></img>
           <img src={CssIcon} alt="css icon" width="40px" height="40px"></img>
@@ -81,7 +72,7 @@ export default function TechStack() {
             height="40px"
           ></img>
         </div>
-      </FadeInSection>
+      </FadeInSection> */}
     </>
   );
 }

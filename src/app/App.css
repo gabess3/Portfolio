@@ -13,45 +13,48 @@
 }
 
 .container {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-around;
-  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 150px;
+  padding-top: 100px;
 }
 
 .about h1 {
+  margin-top: 0;
   font-size: 10vw;
-  margin-top: 200px;
   animation: fadeIn 3s;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   letter-spacing: 2.2px;
 }
 
 
 .about h3 {
-  box-shadow: 0 10px 20px rgb(69, 33, 112);
+  box-shadow: rgba(69, 33, 112, 0.4) 1.95px 1.95px 2.6px;
   background-color: transparent;
+  background: rgb(69, 33, 112);
   border-radius: 15px;
   animation: fadeIn 3s;
   animation-delay: 1s;
   animation-fill-mode: both;
   font-size: 22px;
-  font-family: "FiraMono";
-  padding-left: 50px;
-  padding-right: 50px;
+  font-family: 'FiraMono';
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  width: 100%;
+  max-width: 370px;
+  margin: auto;
 }
 
 .aboutMe {
   animation: fadeIn 3s;
   animation-delay: 2s;
   animation-fill-mode: both;
-  font-size: 100%;
-  font-family: "FiraMono";
-  border:1px solid rgb(69, 33, 112);
+  font-family: 'FiraMono';
   word-break: keep-all;
-  margin: 100px;
+  max-width: 800px;
+  margin: auto;
   margin-top: 150px;
   padding: 10px;
   border-radius: 10px;
@@ -96,120 +99,45 @@
   background-color: #222;
   min-height: 75vh;
   background-image: linear-gradient(180deg, #1f1d25, #121212);
-  border:1px solid rgb(69, 33, 112);
 }
 
 
-.frontEnd { 
+.techStack {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  width: 25%;
   padding: 10px;
   border-radius: 10px;
+  max-width: 400px;
 }
 
-.frontEnd h2 {
+.techStack h2 {
   text-align: center;
   padding: 5px;
-  border-bottom: 3px solid white;
   word-wrap: normal;
   font-family: "Poppins";
-  font-size: 2.5vw;
+  font-size: 2.2rem;
 }
 
-.frontEnd li {
+.techStack li {
   text-align: center;
   list-style: none;
   padding: 13px;
   border-radius: 15px;
-  word-wrap:normal;
-  border: 1px dotted grey;
-  margin: 5px;
-  font-family: "FiraMono";
-  font-size: 1.75vw;
-}
-
-.frontEnd li:hover {
-  box-shadow: 0 0 75px rgb(205, 110, 205); 
-  transition: ease-in-out 0.5s;
-  color: lightgreen
-}
-
-
-.backEnd { 
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  width: 25%;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.backEnd h2 {
-  text-align: center;
-  padding: 5px;
-  border-bottom: 3px solid white;
   word-wrap: normal;
-  font-family: "Poppins";
-  font-size: 2.5vw;
-}
-
-.backEnd li {
-  text-align: center;
-  list-style: none;
-  padding: 13px;
   margin: 5px;
-  border-radius: 15px;
-  word-wrap: break-word;
-  border: 1px dotted grey;
-  font-family: "FiraMono";
-  font-size: 1.75vw;
+  font-family: 'FiraMono';
+  font-size: 1.5rem;
+  background: #121212;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
 }
 
-.backEnd li:hover {
-  box-shadow: 0 0 75px rgb(205, 110, 205); 
-  transition: ease-in-out 0.4s;
-
-  color: lightgreen
-}
-
-
-
-.icons {
-  display: flex;
-  flex-direction: row wrap;
-  justify-content: space-evenly;
-  justify-items: center;
-  margin-top: 40px;
-  border-radius: 10px;
-}
-
-.icons img {
-  margin: 4px;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px black;
-}
-
-.icons img:hover {
+.tech li:hover {
+  background: #242424;
   transition: ease-in-out 0.5s;
-  box-shadow: 0 0 100px rgb(205, 110, 205);
-  scale: 1.7;
-  animation: pulse 4s infinite linear;
-}
-
-@keyframes pulse {
-  0% {
-		box-shadow: 0 0 50px rgba(205, 110, 205);
-	}
-
-	50% {
-		box-shadow: 0 0 60px rgba(158, 32, 158);
-	}
-
-	100% {
-		box-shadow: 0 0 50px rgba(205, 110, 205);
-	}
+  color: lightgreen;
 }
 
 
@@ -248,10 +176,6 @@
   transition: ease-in-out 0.5s;
   background-color: rgb(69, 33, 112);
 
-}
-
-.fish {
-  scale: 0.4;
 }
 
 /* Contact Stylings */

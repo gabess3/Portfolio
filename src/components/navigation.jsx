@@ -129,27 +129,25 @@ function Header() {
                 </MenuItem>
               ))}
             </Menu>
+            <Typography
+              noWrap
+              component="a"
+              href="/Portfolio"
+              sx={{
+                m: 1,
+                p: 2,
+                display: { xs: "flex", md: "none" },
+                fontFamily: "Monaco",
+                fontWeight: 600,
+                fontSize: 22,
+                letterSpacing: ".1rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              ./root<span className="terminal">_</span>
+            </Typography>
           </Box>
-          <Terminal
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1, scale: 1.5 }}
-          />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".2rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Gabriel Ess
-          </Typography>
           <Box
             sx={{
               flexGrow: 1,
