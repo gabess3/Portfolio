@@ -1,19 +1,42 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Button,
+  MenuItem,
+  Link,
+} from "@mui/material";
+import Terminal from "@mui/icons-material/Terminal";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
 import resume from "../images/Resumé.pdf";
-import Link from "@mui/material/Link";
-import TerminalIcon from "@mui/icons-material/Terminal";
 
-const pages = ["About", "Projects", "Resumé", "Contact"];
+const tabs = [
+  {
+    name: "About",
+    link: "#about",
+    target: "_self",
+  },
+  {
+    name: "Projects",
+    link: "#projects",
+    target: "_self",
+  },
+  {
+    name: "Resumé",
+    link: resume,
+    target: "_blank",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+    target: "_self",
+  },
+];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -30,7 +53,7 @@ function Header() {
     <AppBar sx={{ backgroundColor: "black" }} position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <TerminalIcon
+          <Terminal
             sx={{ display: { xs: "none", md: "flex" }, mr: 1, fontSize: 50 }}
           />
           <Typography
@@ -83,106 +106,37 @@ function Header() {
             >
               {/* Creates nav items on xs displays */}
 
-              {pages.map((page) =>
-                page === "Resumé" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href={resume}
-                      target="_blank"
-                      sx={{ textDecoration: "none", color: "white" }}
+              {tabs.map((tab) => (
+                <MenuItem key={tab} onClick={handleCloseNavMenu}>
+                  <Link
+                    href={tab.link}
+                    target={tab.target}
+                    sx={{ textDecoration: "none", color: "white" }}
+                  >
+                    <Typography
+                      sx={{
+                        p: 10,
+                        color: "white",
+                        textDecoration: "none",
+                        fontFamily: "FiraMono",
+                        textTransform: "lowercase",
+                      }}
+                      textAlign="center"
                     >
-                      <Typography
-                        sx={{
-                          p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
-                        }}
-                        textAlign="center"
-                      >
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ) : page === "About" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href="#about"
-                      sx={{ textDecoration: "none", color: "white" }}
-                    >
-                      <Typography
-                        sx={{
-                          p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
-                        }}
-                        textAlign="center"
-                      >
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ) : page === "Projects" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href="#projects"
-                      sx={{ textDecoration: "none", color: "white" }}
-                    >
-                      <Typography
-                        sx={{
-                          p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
-                        }}
-                        textAlign="center"
-                      >
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ) : page === "Contact" ? (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Link
-                      href="#contact"
-                      sx={{ textDecoration: "none", color: "white" }}
-                    >
-                      <Typography
-                        sx={{
-                          p: 10,
-                          color: "white",
-                          textDecoration: "none",
-                          fontFamily: "FiraMono",
-                          textTransform: "lowercase",
-                        }}
-                        textAlign="center"
-                      >
-                        {page}
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                ) : (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography sx={{ p: 10 }} textAlign="center">
-                      {page}
+                      /{tab.name}
                     </Typography>
-                  </MenuItem>
-                )
-              )}
+                  </Link>
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
-          <TerminalIcon
+          <Terminal
             sx={{ display: { xs: "flex", md: "none" }, mr: 1, scale: 1.5 }}
           />
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -204,79 +158,26 @@ function Header() {
           >
             {/* Creates nav items on medium displays */}
 
-            {pages.map((page) =>
-              page === "Resumé" ? (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  className="navigation"
-                  sx={{
-                    m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
-                    fontSize: 17,
-                    textTransform: "lowercase",
-                  }}
-                  href={resume}
-                  target="_blank"
-                >
-                  03/ {page}
-                </Button>
-              ) : page === "Projects" ? (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
-                    fontSize: 17,
-                    textTransform: "lowercase",
-                  }}
-                  href="#projects"
-                >
-                  02/ {page}
-                </Button>
-              ) : page === "About" ? (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
-                    fontSize: 17,
-                    textTransform: "lowercase",
-                  }}
-                  href="#about"
-                >
-                  01/ {page}
-                </Button>
-              ) : (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{
-                    m: 2,
-                    color: "white",
-                    display: "block",
-                    textDecoration: "none",
-                    fontFamily: "FiraMono",
-                    fontSize: 17,
-                    textTransform: "lowercase",
-                  }}
-                  href="#contact"
-                >
-                  04/ {page}
-                </Button>
-              )
-            )}
+            {tabs.map((tab) => (
+              <Button
+                key={tab.name}
+                onClick={handleCloseNavMenu}
+                className="navigation"
+                sx={{
+                  m: 2,
+                  color: "white",
+                  display: "block",
+                  textDecoration: "none",
+                  fontFamily: "FiraMono",
+                  fontSize: 17,
+                  textTransform: "lowercase",
+                }}
+                href={tab.link}
+                target={tab.target}
+              >
+                /{tab.name}
+              </Button>
+            ))}
           </Box>
         </Toolbar>
       </Container>
