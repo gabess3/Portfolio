@@ -16,14 +16,14 @@ export default function Project() {
       link: "https://github.com/NTumminaro/ACGC-Golden-Rod-Pro",
       image: fish,
       description:
-        "This is a project that tracks the location of Fish in the GameCube game Animal Crossing. This information is used for Speedrunners. This was created with React / Vite.",
+        "This is a project that tracks the location of Fish in the GameCube game Animal Crossing. This information is used for Speedrunners in the gaming community. This was created with React / Vite.",
     },
     {
       name: "SOCIAL NETWORK API",
       link: "https://github.com/gabess3/Social-Network-API",
       image: socialNetwork,
       description:
-        "This is an API that functions as a CRUD application madewith MongoDB for getting information that would be foundon a social network, such as user information, thoughts, reactions, etc.",
+        "This is an API CRUD application made with MongoDB that retrieves information used on a social network such as user information, thoughts, reactions, etc.",
     },
     {
       name: "NO SHELF CONTROL",
