@@ -165,10 +165,9 @@
 }
 
 .buttonCenter {
-  position: relative;
-  width: 40%;
-  left: 30%;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .buttonCenter:hover {

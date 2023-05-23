@@ -151,7 +151,7 @@ function Header() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", justifyContent: "center" },
+              display: { xs: "none", md: "flex", justifyContent: "flex-end" },
             }}
           >
             {/* Creates nav items on medium displays */}
@@ -162,7 +162,7 @@ function Header() {
                 onClick={handleCloseNavMenu}
                 className="navigation"
                 sx={{
-                  m: 2,
+                  mx: 4,
                   color: "white",
                   display: "block",
                   textDecoration: "none",
