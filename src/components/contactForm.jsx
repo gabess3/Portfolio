@@ -8,9 +8,9 @@ import { validateEmail } from "../utils/emailValidator";
 import { useState } from "react";
 
 export default function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState(" ");
+  const [email, setEmail] = useState(" ");
+  const [message, setMessage] = useState(" ");
 
   const handleEmail = (event) => {
     const emailInput = document.getElementById("email");
@@ -25,11 +25,6 @@ export default function ContactForm() {
       emailWarning.textContent =
         "*This is a required field. Please enter a valid email address.";
     }
-  };
-
-  const changeEmail = (event) => {
-    setEmail(event.target.value);
-    console.log(email);
   };
 
   const handleName = () => {
@@ -47,11 +42,6 @@ export default function ContactForm() {
     }
   };
 
-  const changeName = (event) => {
-    setName(event.target.value);
-    console.log(name);
-  };
-
   const handleMessage = () => {
     const messageInput = document.getElementById("standard-multiline-flexible");
     setMessage(messageInput.value);
@@ -67,10 +57,6 @@ export default function ContactForm() {
     }
   };
 
-  const changeMessage = (event) => {
-    setMessage(event.target.value);
-    console.log(message);
-  };
 
   const submitHandler = () => {
     handleEmail();
@@ -89,7 +75,7 @@ export default function ContactForm() {
           id="name"
           aria-describedby="my-helper-name"
           value={name}
-          onChange={changeName}
+          onChange={(e) => setName(e.target.value)}
         />
         <p id="nameRequired"></p>
       </FormControl>
@@ -101,7 +87,7 @@ export default function ContactForm() {
           id="email"
           aria-describedby="my-helper-text"
           value={email}
-          onChange={changeEmail}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <p id="emailRequired"></p>
       </FormControl>
@@ -114,7 +100,7 @@ export default function ContactForm() {
         minRows={5}
         required={true}
         value={message}
-        onChange={changeMessage}
+        onChange={(e) => setMessage(e.target.value)}
       />
       <p id="messageRequired"></p>
       <Grid align="right">
