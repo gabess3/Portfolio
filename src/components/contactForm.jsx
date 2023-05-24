@@ -1,9 +1,11 @@
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Input from "@mui/material/Input";
-import TextField from "@mui/material/TextField";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
+import {
+  Button,
+  Grid,
+  TextField,
+  Input,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
 import { validateEmail } from "../utils/emailValidator";
 import { useState } from "react";
 
@@ -17,10 +19,8 @@ export default function ContactForm() {
     setEmail(emailInput.value);
     const emailWarning = document.getElementById("emailRequired");
     if (validateEmail(email)) {
-      console.log("yay email");
       emailWarning.textContent = "";
     } else {
-      console.log("bad email");
       emailWarning.setAttribute("class", "contactAlert");
       emailWarning.textContent =
         "*This is a required field. Please enter a valid email address.";
@@ -32,10 +32,8 @@ export default function ContactForm() {
     setName(nameInput.value);
     const nameWarning = document.getElementById("nameRequired");
     if (name.length > 0) {
-      console.log("yay name");
       nameWarning.textContent = "";
     } else if (name.length === 0) {
-      console.log("bad name");
       nameWarning.setAttribute("class", "contactAlert");
       nameWarning.textContent =
         "*This is a required field. Please enter your name.";
@@ -47,16 +45,13 @@ export default function ContactForm() {
     setMessage(messageInput.value);
     const messageWarning = document.getElementById("messageRequired");
     if (message.length > 0) {
-      console.log("yay message");
       messageWarning.textContent = "";
     } else if (message.length === 0) {
-      console.log("bad message");
       messageWarning.setAttribute("class", "contactAlert");
       messageWarning.textContent =
         "*This is a required field. Please enter a message to send in your email.";
     }
   };
-
 
   const submitHandler = () => {
     handleEmail();

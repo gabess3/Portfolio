@@ -1,8 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import { Box, Link } from '@mui/material/';
 
 export default function Footer() {
 	return (
