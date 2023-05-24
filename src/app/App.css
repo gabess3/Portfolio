@@ -15,7 +15,7 @@
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
   padding-top: 100px;
 }
 
@@ -158,7 +158,6 @@
 }
 
 .projects {
-  margin: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;

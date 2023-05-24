@@ -38,7 +38,7 @@ export default function Project() {
     <div className="projectContainer">
       <div id="projects">
         <FadeInSection>
-          <h2 style={{ fontFamily: "Poppins", fontSize: 40, marginTop: 150 }}>
+          <h2 style={{ fontFamily: "Poppins", fontSize: 40, marginTop: 100 }}>
             /projects
           </h2>
         </FadeInSection>
