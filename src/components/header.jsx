@@ -7,7 +7,7 @@ export default function Header() {
         <div id="about" className="container">
           <div className="about container">
             <h1>GABRIEL ESS</h1>
-            <h3>FULL STACK DEVELOPER</h3>
+            <h2>FULL STACK DEVELOPER</h2>
             <div className="aboutMe">
             <span>
               Hello! My name is Gabriel Ess, and I'm a Dallas-based Full Stack

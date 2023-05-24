@@ -107,7 +107,7 @@ function Header() {
               {/* Creates nav items on xs displays */}
 
               {tabs.map((tab) => (
-                <MenuItem key={tab} onClick={handleCloseNavMenu}>
+                <MenuItem key={tab.name} onClick={handleCloseNavMenu}>
                   <Link
                     href={tab.link}
                     target={tab.target}

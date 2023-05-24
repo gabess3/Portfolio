@@ -80,7 +80,7 @@ export default function ContactForm() {
         <p id="nameRequired"></p>
       </FormControl>
       <FormControl sx={{ width: 300, m: 5 }}>
-        <InputLabel htmlFor="my-input" required={true}>
+        <InputLabel htmlFor="email" required={true}>
           Email address
         </InputLabel>
         <Input
