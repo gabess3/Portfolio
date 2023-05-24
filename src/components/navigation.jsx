@@ -115,7 +115,7 @@ function Header() {
                   >
                     <Typography
                       sx={{
-                        p: 10,
+                        p: 3,
                         color: "white",
                         textDecoration: "none",
                         fontFamily: "FiraMono",
