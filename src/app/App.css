@@ -1,67 +1,66 @@
 /* Top Section Styles */
 
 * {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 .App-header {
-  background-image: linear-gradient(360deg, #1f1d25, rgb(4, 4, 20));
-  background-size: cover;
-  min-height: 100vh;
-  color: white;
-  text-align: center;
+	background-image: linear-gradient(360deg, #1f1d25, rgb(4, 4, 20));
+	background-size: cover;
+	min-height: 100vh;
+	color: white;
+	text-align: center;
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 80px;
-  padding-top: 100px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 80px;
+	padding-top: 100px;
 }
 
 .about h1 {
-  margin-top: 0;
-  font-size: 10vw;
-  animation: fadeIn 3s;
-  font-family: 'Poppins';
-  letter-spacing: 2.2px;
+	margin-top: 0;
+	font-size: 10vw;
+	animation: fadeIn 3s;
+	font-family: 'Poppins';
+	letter-spacing: 2.2px;
 }
 
-
 .about h2 {
-  box-shadow: rgba(69, 33, 112, 0.4) 1.95px 1.95px 2.6px;
-  background-color: transparent;
-  background: rgb(69, 33, 112);
-  border-radius: 15px;
-  animation: fadeIn 3s;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-  font-size: 22px;
-  font-family: 'FiraMono';
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 100%;
-  max-width: 370px;
-  margin: auto;
+	box-shadow: rgba(69, 33, 112, 0.4) 1.95px 1.95px 2.6px;
+	background-color: transparent;
+	background: rgb(69, 33, 112);
+	border-radius: 15px;
+	animation: fadeIn 3s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	font-size: 22px;
+	font-family: 'FiraMono';
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	max-width: 370px;
+	margin: auto;
 }
 
 .aboutMe {
-  animation: fadeIn 3s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
-  font-family: 'FiraMono';
-  word-break: keep-all;
-  max-width: 800px;
-  margin: auto;
-  margin-top: 150px;
-  padding: 10px;
-  border-radius: 10px;
+	animation: fadeIn 3s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	font-family: 'FiraMono';
+	word-break: keep-all;
+	max-width: 800px;
+	margin: auto;
+	margin-top: 150px;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 @keyframes fadeIn {
-  0% {
+	0% {
 		opacity: 0;
 	}
 
@@ -70,158 +69,155 @@
 	}
 }
 
-
 .terminal {
-  animation: blink 1s infinite step-end;
-  background-color: grey;
-  font-size: x-large;
- }
- 
- @keyframes blink {
-   from, to { opacity: 0; }
-   
-   50% {opacity: 1;}
- }
+	animation: blink 1s infinite step-end;
+	background-color: grey;
+	font-size: large;
+}
 
+@keyframes blink {
+	from,
+	to {
+		opacity: 0;
+	}
 
+	50% {
+		opacity: 1;
+	}
+}
 
 /* Tech Stack Styles */
 
 .list {
-  padding: 0px;
+	padding: 0px;
 }
 
 .tech {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  justify-items: center;
-  background-color: #222;
-  min-height: 75vh;
-  background-image: linear-gradient(180deg, #1f1d25, #121212);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	justify-items: center;
+	background-color: #222;
+	min-height: 75vh;
+	background-image: linear-gradient(180deg, #1f1d25, #121212);
 }
 
-
 .techStack {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 10px;
-  max-width: 400px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 10px;
+	max-width: 400px;
 }
 
 .techStack h2 {
-  text-align: center;
-  padding: 5px;
-  word-wrap: normal;
-  font-family: "Poppins";
-  font-size: 2.2rem;
+	text-align: center;
+	padding: 5px;
+	word-wrap: normal;
+	font-family: 'Poppins';
+	font-size: 2.2rem;
 }
 
 .techStack li {
-  text-align: center;
-  list-style: none;
-  padding: 13px;
-  border-radius: 15px;
-  word-wrap: normal;
-  margin: 5px;
-  font-family: 'FiraMono';
-  font-size: 1.5rem;
-  background: #121212;
-  margin-bottom: 1.5rem;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
+	text-align: center;
+	list-style: none;
+	padding: 13px;
+	border-radius: 15px;
+	word-wrap: normal;
+	margin: 5px;
+	font-family: 'FiraMono';
+	font-size: 1.5rem;
+	background: #121212;
+	margin-bottom: 1.5rem;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
 }
 
 .tech li:hover {
-  background: #242424;
-  transition: ease-in-out 0.5s;
-  color: lightgreen;
+	background: #242424;
+	transition: ease-in-out 0.5s;
+	color: lightgreen;
 }
-
 
 /* Project Styles */
 
-
 .projectContainer {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-around;
-  align-items: center;
-  min-height: 75vh;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-around;
+	align-items: center;
+	min-height: 75vh;
 }
 
 .projectContainer h2 {
-  margin: 10px;
-  padding: 50px;
+	margin: 10px;
+	padding: 50px;
 }
 
 .projects {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 }
 
 .buttonCenter {
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
 }
 
 .buttonCenter:hover {
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-  background-color: rgb(69, 33, 112);
-
+	cursor: pointer;
+	transition: ease-in-out 0.5s;
+	background-color: rgb(69, 33, 112);
 }
 
 /* Contact Stylings */
 
 .contactForm {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-evenly;
-  align-items: center;
-  padding: 20px;
-  margin: 40px;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: space-evenly;
+	align-items: center;
+	padding: 20px;
+	margin: 40px;
 }
 
 .contactForm h3 {
-  font-size: 60px;
+	font-size: 60px;
 }
 
 .contactAlert {
-  color: red;
-  text-transform: capitalize;
+	color: red;
+	text-transform: capitalize;
 }
 
 /* Footer Styling */
 
 .footer {
-  display: flex; 
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px; 
-  background-color: black
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 20px;
+	background-color: black;
 }
 
 .footerIcon {
-  color: white
+	color: white;
 }
-
 
 /* Fade In Styles */
 
 .fade-in-section {
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  will-change: opacity, visibility;
+	opacity: 0;
+	transform: translateY(20vh);
+	visibility: hidden;
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	will-change: opacity, visibility;
 }
 .fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
+	opacity: 1;
+	transform: none;
+	visibility: visible;
 }
