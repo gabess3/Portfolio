@@ -132,18 +132,16 @@ function Header() {
 							component='a'
 							href='/Portfolio'
 							sx={{
-								m: 1,
 								p: 2,
+								marginTop: 1,
 								display: { xs: 'flex', md: 'none' },
-								fontFamily: 'Monaco',
-								fontWeight: 600,
-								fontSize: 22,
+								fontFamily: 'FiraMono',
 								letterSpacing: '.1rem',
-								color: 'inherit',
+								color: 'white',
 								textDecoration: 'none',
 							}}
 						>
-							./root<span className='terminal'>_</span>
+							gabrieless@portfolio~$<span className='terminal'>_</span>
 						</Typography>
 					</Box>
 					<Box
